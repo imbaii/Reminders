@@ -7,7 +7,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -23,7 +22,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class RemindersActivity extends AppCompatActivity {
 
@@ -85,7 +83,7 @@ public class RemindersActivity extends AppCompatActivity {
                                     final int masterListPosition, long id) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(RemindersActivity.this);
                 ListView modeListView = new ListView(RemindersActivity.this);
-                String[] modes = new String[]{"Edit Reminder", "Delete Reminder"};
+                String[] modes = new String[]{"编辑便签", "删除便签"};
                 ArrayAdapter<String> modeAdapter = new ArrayAdapter<>(RemindersActivity.this,
                         android.R.layout.simple_list_item_1, android.R.id.text1, modes);
                 modeListView.setAdapter(modeAdapter);
@@ -161,21 +159,10 @@ public class RemindersActivity extends AppCompatActivity {
     }
 
     private void insertSomeReminders() {
-        mDbAdapter.createReminder("Buy Learn Android Studio", true);
-        mDbAdapter.createReminder("Send Dad birthday gift", false);
-        mDbAdapter.createReminder("Dinner at the Gage on Friday", false);
-        mDbAdapter.createReminder("String squash racket", false);
-        mDbAdapter.createReminder("Shovel and salt walkways", false);
-        mDbAdapter.createReminder("Prepare Advanced Android syllabus", true);
-        mDbAdapter.createReminder("Buy new office chair", false);
-        mDbAdapter.createReminder("Call Auto-body shop for quote", false);
-        mDbAdapter.createReminder("Renew membership to club", false);
-        mDbAdapter.createReminder("Buy new Galaxy Android phone", true);
-        mDbAdapter.createReminder("Sell old Android phone - auction", false);
-        mDbAdapter.createReminder("Buy new paddles for kayaks", false);
-        mDbAdapter.createReminder("Call accountant about tax returns", false);
-        mDbAdapter.createReminder("Buy 300,000 shares of Google", false);
-        mDbAdapter.createReminder("Call the Dalai Lama back", true);
+        mDbAdapter.createReminder("春眠不觉晓", true);
+        mDbAdapter.createReminder("处处闻啼鸟", false);
+        mDbAdapter.createReminder("夜来风雨声", true);
+        mDbAdapter.createReminder("花落知多少", false);
     }
 
     private void fireCustomDialog(final Reminder reminder) {

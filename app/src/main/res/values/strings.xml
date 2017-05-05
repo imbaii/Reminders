@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">小白便签</string>
-    <string name="new_reminder">new_reminder</string>
-    <string name="exit">exit</string>
+    <string name="new_reminder">添加便签</string>
+    <string name="exit">退出便签</string>
 </resources>
